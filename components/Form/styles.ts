@@ -1,14 +1,14 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 25rem;
-  height: 30rem;
+  max-width: 350px;
+  min-height: 40vh;
   border-radius: 12px;
   margin: 0px auto;
   background: ${({ theme }) => theme.detailsButtonPurple};
   box-shadow: 0px 10px 10px ${({ theme }) => theme.gray.grayMedium};
   background-color: white;
-  padding: 5px;
+  padding: 2rem;
   
 `;
 
@@ -28,11 +28,11 @@ export const Actions = styled.div`
   gap: 10px;
   align-items: center;
   width: 100%;
-  margin-top: 1rem;
 `;
 
 export const Form = styled.form`
   margin: 20% auto;
+  margin-bottom: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -52,7 +52,7 @@ export const Control = styled.div`
     padding-left: 20px;
     width: 100%;
     height: 2rem;
-    font-size: 1rem;
+    font-size: 0,5rem;
     outline: none;
 
     ::placeholder {
@@ -62,16 +62,19 @@ export const Control = styled.div`
   }
 `;
 
-export const Title = styled.h1`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  border-bottom: 5px solid ${({ theme }) => theme.detailsButtonPurple};
-  width: 10%;
-  border-radius: 3px;
-  font-size: 2rem;
-  padding-bottom: 2px;
-  margin-left: 20px;
+export const Title = styled.h2`
+  position: relative;
+
+  &::before{
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 25px;
+    bottom: 3px;
+    left: 0%;
+    border-radius: 8px;
+    background-color: solid ${({ theme }) => theme.detailsButtonPurple} ;
+    }
 `;
 
 export const Background = styled.div`
