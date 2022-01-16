@@ -1,7 +1,7 @@
 import Header from "../Header";
 import * as styles from "./styles";
 
-const Layout = ({ children }: any) => {
+const Layout: React.FC = ({ children }: any) => {
   return (
     <>
       <Header />

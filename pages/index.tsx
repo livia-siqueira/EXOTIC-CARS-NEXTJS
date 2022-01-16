@@ -1,10 +1,13 @@
-import type { NextPage } from 'next'
-import Auth from './auth'
+import type { NextPage } from "next";
+import { Toaster } from "react-hot-toast";
+import Auth from "./auth";
 
 const Home: NextPage = () => {
   return (
-    <Auth/>
-  )
-}
+    <>
+      <Auth />
+    </>
+  );
+};
 
-export default Home
+export default Home;

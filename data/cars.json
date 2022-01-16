@@ -1,1 +1,155 @@
-[{"id":1,"email":"livia","password":"livia"},{"id":2,"email":"livia","password":"livia"},{"id":3,"email":"livia","password":"livia"}]
+[
+  {
+    "id": 1,
+    "model": "california",
+    "brand": "Ferrari",
+    "price": "725",
+    "period": "day",
+    "logo_brand": "https://i.ibb.co/yNXhcSx/logoFerrari.png",
+    "cover_photo": "https://i.ibb.co/nQy93vJ/Ferrari.png",
+    "photos": [
+      {
+        "color": "yellow",
+        "photo": "https://i.ibb.co/x5Kyv2f/ferrariAmarela.png"
+      },
+      {
+        "color": "red",
+        "photo": "https://i.ibb.co/vJ865Zy/CapaFerrariVermelha.png"
+      },
+      { "color": "gray", "photo": "https://i.ibb.co/SdMmhFb/ferraricinza.png" }
+    ]
+  },
+  { "id": 2, "email": "livia", "password": "livia" },
+  { "id": 3, "email": "livia", "password": "livia" },
+  {
+    "id": 4,
+    "model": "Mol",
+    "brand": "Marca",
+    "price": "Price",
+    "logo_brand": "Brand",
+    "photos": [],
+    "period": "",
+    "cover_photo": ""
+  },
+  {
+    "id": 5,
+    "model": "",
+    "brand": "Marca",
+    "price": "Price",
+    "logo_brand": "Brand",
+    "photos": [],
+    "cover_photo": ""
+  },
+  {
+    "id": 6,
+    "model": "california",
+    "brand": "Ferrari",
+    "price": "725",
+    "logo_brand": "https://i.ibb.co/yNXhcSx/logoFerrari.png",
+    "photos": [],
+    "cover_photo": ""
+  },
+  {
+    "id": 7,
+    "model": "n n",
+    "brand": "bhnjm",
+    "price": "bhnjm",
+    "logo_brand": "https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg",
+    "photos": [
+      "https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg"
+    ],
+    "cover_photo": ""
+  },
+  {
+    "id": 8,
+    "model": "n n",
+    "brand": "bhnjm",
+    "price": "bhnjm",
+    "logo_brand": "https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg",
+    "photos": [
+      "https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg"
+    ],
+    "period": "Day",
+    "cover_photo": ""
+  },
+  {
+    "id": 9,
+    "model": "n n",
+    "brand": "bhnjm",
+    "price": "bhnjm",
+    "logo_brand": "https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg",
+    "photos": [
+      "https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg",
+      {
+        "photo": "https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg",
+        "color": "Red"
+      },
+      {
+        "photo": "https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg",
+        "color": "Red"
+      }
+    ],
+    "period": "Day",
+    "cover_photo": ""
+  },
+  {
+    "id": 10,
+    "model": "n n",
+    "brand": "bhnjm",
+    "price": "bhnjm",
+    "logo_brand": "https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg",
+    "photos": [
+      "https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg",
+      {
+        "photo": "https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg",
+        "color": "Red"
+      },
+      {
+        "photo": "https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg",
+        "color": "Red"
+      }
+    ],
+    "period": "Day",
+    "cover_photo": ""
+  },
+  {
+    "id": 11,
+    "model": "n n",
+    "brand": "bhnjm",
+    "price": "bhnjm",
+    "logo_brand": "https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg",
+    "photos": [
+      "https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg",
+      {
+        "photo": "https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg",
+        "color": "Red"
+      },
+      {
+        "photo": "https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg",
+        "color": "Red"
+      }
+    ],
+    "period": "Day",
+    "cover_photo": ""
+  },
+  {
+    "id": 12,
+    "model": "n n",
+    "brand": "bhnjm",
+    "price": "bhnjm",
+    "logo_brand": "https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg",
+    "photos": [
+      "https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg",
+      {
+        "photo": "https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg",
+        "color": "Red"
+      },
+      {
+        "photo": "https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg",
+        "color": "Red"
+      }
+    ],
+    "period": "Day",
+    "cover_photo": ""
+  }
+]

@@ -10,7 +10,8 @@ const theme = {
         grayLigth_4: '#C3C3C3',
         grayLigth_5: '#D8D7D7',
         grayLigth_6: '#C4C4C4',
-        grayLigth_7: '#F3F1FC'
+        grayLigth_7: '#F3F1FC',
+        grayLigth_8: '#F8F8FA'
     },
     fonts: {
         principal: 'Segoe UI',

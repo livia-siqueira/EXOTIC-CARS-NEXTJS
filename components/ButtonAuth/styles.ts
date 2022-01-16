@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 interface Button {
   isBorder: boolean;
+  page: string;
 }
 
 export const Button = styled.button<Button>`
@@ -12,8 +13,7 @@ export const Button = styled.button<Button>`
   background-color: transparent;
   font-weight: bold;
   padding: 4px;
-  width: 70%;
-  max-width: 100%;
+  width: ${({page}) => page === 'Header' ? '5rem' : '60%'};
   border-radius: 13px;
   outline: none;
 `;

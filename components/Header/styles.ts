@@ -15,3 +15,4 @@ export const Title = styled.h2`
   font-variant: small-caps;
   color: ${({ theme }) => theme.gray.grayDark};
 `;
+

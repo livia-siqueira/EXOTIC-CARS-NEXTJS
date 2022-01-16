@@ -9,7 +9,7 @@ interface Props {
 }
 const initialValues: Props = { email: "", password: "" };
 
-const validateFormLogin = (values : Props) => {
+const validateFormLogin = (values: Props) => {
   const erros: Props = initialValues;
 
   if (!values.email) {
@@ -27,15 +27,13 @@ const validateFormLogin = (values : Props) => {
   return erros;
 };
 
-const FormAuth = () => {
+const FormAuth: React.FC = () => {
   const [isLogin, setIsLogin] = useState<boolean>(true);
 
   const changeFunctionButton = (event: FormEvent<HTMLButtonElement>) => {
     event.preventDefault();
     setIsLogin((prev) => !prev);
   };
-  
-  
 
   return (
     <>
@@ -69,10 +67,12 @@ const FormAuth = () => {
           </styles.Control>
           <styles.Actions>
             <ButtonAuth
+              page="Login"
               title={isLogin ? "Login" : "Create Account"}
               isBorder={true}
             />
             <ButtonAuth
+              page="Login"
               onClick={changeFunctionButton}
               title={isLogin ? "Create Account" : "Login"}
               isBorder={false}
