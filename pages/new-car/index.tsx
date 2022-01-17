@@ -1,4 +1,4 @@
-import {CarForm} from "../components/";
+import {CarForm} from "../../components";
 
 
 const NewCar = () => {

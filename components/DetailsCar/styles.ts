@@ -1,7 +1,10 @@
 import styled from "styled-components";
 import Image from "next/image";
 
-export const Container = styled.div``;
+export const Container = styled.div`
+width: 80%;
+margin: 20px auto;
+`;
 
 export const Title = styled.div`
   width: 330px;

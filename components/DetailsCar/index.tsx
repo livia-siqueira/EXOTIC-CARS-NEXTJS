@@ -18,6 +18,8 @@ const DetailsCar: React.FC<Props> = ({ carSelected }) => {
     setCarActive(index);
   }, []);
 
+ 
+
   return (
     <styles.Container>
       <styles.Title>
@@ -32,17 +34,17 @@ const DetailsCar: React.FC<Props> = ({ carSelected }) => {
       <styles.ContainerItems>
         <button>Back to catalog</button>
         <styles.ImageBig
-          src={carSelected?.photos[carActive].photo}
+          src={photos[carActive].photo}
           width={700}
           height={300}
           layout="fixed"
         />
         <styles.DetailsColors>
-          0{carSelected.id} {carSelected?.photos[carActive].color}
+          0{carActive + 1} {photos[carActive].color}
         </styles.DetailsColors>
       </styles.ContainerItems>
       <SliderCars
-        ImagesCar={carSelected ? carSelected.photos : null}
+        ImagesCar={photos}
         indexActive={carActive}
         handleGoCar={changeCarActiveColor}
       />

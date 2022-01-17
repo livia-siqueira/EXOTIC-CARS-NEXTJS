@@ -5,6 +5,9 @@ import ButtonAuth from "./ButtonAuth";
 import CarForm from "./CarForm";
 import AllCars from "./AllCars";
 import CarItem from "./CarItem";
+import Page from './Page';
+import Button from "./Button";
+import Location from "./Location";
  export {
      Form,
      AllCars,
@@ -12,5 +15,8 @@ import CarItem from "./CarItem";
      Header, 
      ButtonAuth,
      CarForm,
-     CarItem
+     CarItem,
+     Page,
+     Button,
+     Location
  }

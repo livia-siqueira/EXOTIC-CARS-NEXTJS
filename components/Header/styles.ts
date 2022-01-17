@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import Link from "next/link";
 export const Header = styled.header`
   width: 100%;
   height: 4rem;
@@ -26,4 +26,11 @@ export const TitleDiferent = styled.h4`
   font-size: 1rem;
   font-weight: lighter;
 
+`
+
+export const LinkPageHome = styled(Link)`
+ cursor: pointer;
+  &:hover{
+    cursor: pointer;
+  }
 `
