@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "id": "1",
     "model": "california",
     "brand": "Ferrari",
     "price": "725",
@@ -19,7 +19,26 @@
       { "color": "gray", "photo": "https://i.ibb.co/SdMmhFb/ferraricinza.png" }
     ]
   },
-  { "id": 2, "email": "livia", "password": "livia" },
+  {
+    "id": "2",
+    "model": "california",
+    "brand": "Ferrari",
+    "price": "725",
+    "period": "day",
+    "logo_brand": "https://i.ibb.co/yNXhcSx/logoFerrari.png",
+    "cover_photo": "https://i.ibb.co/nQy93vJ/Ferrari.png",
+    "photos": [
+      {
+        "color": "yellow",
+        "photo": "https://i.ibb.co/x5Kyv2f/ferrariAmarela.png"
+      },
+      {
+        "color": "red",
+        "photo": "https://i.ibb.co/vJ865Zy/CapaFerrariVermelha.png"
+      },
+      { "color": "gray", "photo": "https://i.ibb.co/SdMmhFb/ferraricinza.png" }
+    ]
+  },
   { "id": 3, "email": "livia", "password": "livia" },
   {
     "id": 4,

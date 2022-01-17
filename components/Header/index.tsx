@@ -6,7 +6,7 @@ const Header: React.FC = () => {
   return (
     <styles.Header>
       <div>
-        <styles.Title>exotic cars</styles.Title>
+        <styles.Title>exotic <styles.TitleDiferent>cars</styles.TitleDiferent></styles.Title>
       </div>
       <div></div>
       <nav>

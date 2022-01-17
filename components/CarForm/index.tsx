@@ -1,33 +1,60 @@
-import { FormikErrors, useFormik } from "formik";
-import React, { FormEvent, useRef, useState } from "react";
+import React, { FormEvent, useCallback, useRef, useState } from "react";
 import toast from "react-hot-toast";
-import { Car, Photo } from "../../shared/types";
+import { ButtonAuth } from "..";
+import { Photo } from "../../shared/types";
 import * as styles from "./styles";
 
 const CarForm: React.FC = () => {
   const [visibleInputImages, setVisibleInputImages] = useState<boolean>(false);
-  const [qtdImages, setQtdImages] = useState<number>(0);
+  const [qtdImages, setQtdImages] = useState<number>(3);
   const [optionsState, setOptionsState] = useState<string>("Day");
   const [photos, setPhotos] = useState<Photo[]>([]);
   const inputModel = useRef<HTMLInputElement>(null);
   const inputPrice = useRef<HTMLInputElement>(null);
+  const [inputColor, setInputColor] = useState<string>('');
   const inputLogoBrand = useRef<HTMLInputElement>(null);
-  const cover_photo = useRef<HTMLInputElement>(null);
+  const inputCover_photo = useRef<HTMLInputElement>(null);
   const inputBrand = useRef<HTMLInputElement>(null);
+  const [inputRefImage, setInputRefImage] = useState<string>('');
+  const addImage = useCallback(() => {
+    const enteredLinkImage = inputRefImage;
+    const enteredColorCar = inputColor;
+    if (!enteredLinkImage || !enteredColorCar) {
+      return toast("Please, enter all information 😉");
+    }
+    if(photos.length >= 3){
+      return toast("You have already added enough images")
+    }
+    setPhotos((prev) => {
+      return [...prev, { photo: enteredLinkImage, color: enteredColorCar }];
+    });
+    console.log(photos);
+  }, [inputRefImage, inputColor, photos, qtdImages]);
 
-  const addNewCarHandler = async () => {
-    if(inputModel !== null || !inputBrand || !inputLogoBrand || !inputPrice){
-      return toast('erro')
+  const addNewCarHandler = async (event: FormEvent) => {
+    event.preventDefault();
+    const enteredModel = inputModel.current?.value;
+    const enteredPrice = inputPrice.current?.value;
+    const enteredLogoBrand = inputLogoBrand.current?.value;
+    const enteredBrand = inputBrand.current?.value;
+    const enteredCoverPhoto = inputCover_photo.current?.value;
+    if (!enteredModel || !enteredPrice || !enteredLogoBrand || !enteredBrand || !enteredCoverPhoto) {
+      return toast("Please, enter all information 😉");
     }
-    /*const newCar = {
-      model: car.model,
-      price: car.price,
-      brand: car.brand,
+    const newCar = {
+      model: enteredModel,
+      price: enteredPrice,
+      brand: enteredBrand,
       period: optionsState,
-      logo_brand: car.logo_brand,
-      cover_photo: car.cover_photo,
-      photos: photos
-    }
+      logo_brand: enteredLogoBrand,
+      cover_photo: enteredCoverPhoto,
+      photos: photos,
+    };
+
+    setPhotos([]);
+
+    console.log(newCar);
+    /*
     const data = await fetch("/api/cars", {
       method: "POST",
       body: JSON.stringify({ car: newCar}),
@@ -61,12 +88,18 @@ const CarForm: React.FC = () => {
         height={500}
       />
       <styles.Form onSubmit={addNewCarHandler}>
-        <h2>Exotic Cars - New</h2>
+        <styles.Title>Exotic Cars - New</styles.Title>
         <styles.Input
           type="text"
           id="model"
           placeholder="Model"
           ref={inputModel}
+        />
+        <styles.Input
+          type="text"
+          id="model"
+          placeholder="Cover photo"
+          ref={inputCover_photo}
         />
         <styles.Input
           type="text"
@@ -87,9 +120,10 @@ const CarForm: React.FC = () => {
           ref={inputLogoBrand}
         />
         <styles.Controls>
+          <h6>Number of cars: </h6>
           <styles.Control>
             {" "}
-            <styles.Input
+            <styles.ChoiceImage
               type="radio"
               name="quantidade-images"
               value="1"
@@ -98,7 +132,7 @@ const CarForm: React.FC = () => {
             <styles.Label>1</styles.Label>
           </styles.Control>
           <styles.Control>
-            <styles.Input
+            <styles.ChoiceImage
               type="radio"
               name="quantidade-images"
               value="2"
@@ -107,7 +141,7 @@ const CarForm: React.FC = () => {
             <styles.Label>2</styles.Label>
           </styles.Control>
           <styles.Control>
-            <styles.Input
+            <styles.ChoiceImage
               type="radio"
               name="quantidade-images"
               value="3"
@@ -116,28 +150,39 @@ const CarForm: React.FC = () => {
             <styles.Label>3</styles.Label>
           </styles.Control>
         </styles.Controls>
+
         {visibleInputImages && (
           <styles.Images>
             {numberGame.map((item) => {
               const itemPlaceholder = "Image " + item.toString();
               return (
                 <>
-                  <styles.Input
-                    onChange={(event) =>
-                      setPhotos((prev) => [
-                        { photo: event.target.value, color: "Red" },
-                      ])
-                    }
-                    type="url"
-                    placeholder={itemPlaceholder}
-                  />
+                  <styles.ImageColor>
+                    {" "}
+                    <styles.Input
+                      value={inputRefImage}
+                      onChange={(event) => setInputRefImage(event.target.value)}
+                      type="url"
+                      placeholder={itemPlaceholder}
+                    />
+                    <styles.Input
+                      type="text"
+                      value={inputColor}
+                      onChange={(event) => setInputColor(event.target.value)}
+                      placeholder="Color"
+                    />
+                    <styles.Button type="button" onClick={addImage}>
+                      <styles.Icon />
+                    </styles.Button>
+                  </styles.ImageColor>
                 </>
               );
             })}
           </styles.Images>
         )}
+        <h6>Period: </h6>
         <styles.Select
-          name="Period"
+          defaultValue="Day"
           onChange={(event) => setOptionsState(event.target.value)}
         >
           <option selected value="Day">
@@ -146,9 +191,7 @@ const CarForm: React.FC = () => {
           <option value="Year">Year</option>
           <option value="Month">Month</option>
         </styles.Select>
-        <button type="submit">
-          Salvar Carro
-        </button>
+        <ButtonAuth isBorder={true} title="Save Car" page="" type="submit" />
       </styles.Form>
     </styles.Container>
   );
