@@ -10,13 +10,17 @@ const CarItem: React.FC<{ car: Car }> = ({ car }) => {
   return (
     <styles.Container>
       <styles.Button onClick={redirectPage}>
+        <styles.HeaderItem>
         <styles.ContainerNames>
           <styles.Brand>{car.brand}</styles.Brand>
           <styles.Model>{car.model}</styles.Model>
         </styles.ContainerNames>
+        <styles.Icon>
+        </styles.Icon>
+        </styles.HeaderItem>
         <img src={car.cover_photo} />
         <styles.ContainerPricePeriod>
-          <styles.Price>${car.price}</styles.Price>
+          <styles.Price><styles.IconMoney/>{car.price}</styles.Price>
           <styles.Period>/{car.period}</styles.Period>
         </styles.ContainerPricePeriod>
       </styles.Button>

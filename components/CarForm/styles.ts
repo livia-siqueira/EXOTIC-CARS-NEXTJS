@@ -14,28 +14,31 @@ export const Container = styled.div`
   align-items: center;
   gap: 1rem;
   border: 1px solid ${({ theme }) => theme.gray.grayLigth_6};
+
+  @media (max-width: 1100px) {
+    max-width: 80%;
+    min-height: 70vh;
+  }
+  @media (max-width: 800px) {
+    grid-template-columns: 1fr;
+    padding-top: 10px;
+    min-height: 90vh;
+  }
 `;
 
 export const Form = styled.form`
   display: flex;
   justify-content: space-around;
   align-items: center;
+  @media (max-width: 600px) {
+   flex-direction: column;
+  }
 `;
 
 export const AreaInput = styled.div`
   display: flex;
   flex-direction: column;
 `;
-
-export const Images = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  margin-top: 2rem;
-  justify-content: center;
-`;
-
-
 
 export const Title = styled.h2`
   margin-bottom: 2rem;
@@ -112,6 +115,12 @@ export const Button = styled.div`
   position: relative;
   top: 2rem;
   right: 10rem;
+  @media (max-width: 800px) {
+    left: 8rem;
+    top: -1rem;
+    width: 60%;
+    height: 60%;
+  }
 `;
 
 export const Icon = styled(FiCheck)``;

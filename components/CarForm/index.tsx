@@ -1,55 +1,38 @@
-import React, { FormEvent, useCallback, useRef, useState } from "react";
+import React, {
+  ChangeEvent,
+  FormEvent,
+  useCallback,
+  useRef,
+  useState,
+} from "react";
 import toast from "react-hot-toast";
+import { Url } from "url";
 import { ButtonAuth } from "..";
-import { Photo } from "../../shared/types";
+import { Car, Photo } from "../../shared/types";
 import InputImage from "../InputImage";
 import * as styles from "./styles";
 
 const CarForm: React.FC = () => {
   const [optionsState, setOptionsState] = useState<string>("Day");
   const [photos, setPhotos] = useState<Photo[]>([]);
-  const inputModel = useRef<HTMLInputElement>(null);
-  const inputPrice = useRef<HTMLInputElement>(null);
-  const inputLogoBrand = useRef<HTMLInputElement>(null);
-  const inputCover_photo = useRef<HTMLInputElement>(null);
-  const inputBrand = useRef<HTMLInputElement>(null);
-  const inputImage1 = useRef<HTMLInputElement>(null);
-  const inputImage2 = useRef<HTMLInputElement>(null);
-  const inputImage3 = useRef<HTMLInputElement>(null);
+  const [inputsValues, setInputsValues] = useState<Omit<Car, "id">>({
+    model: "",
+    period: "",
+    logo_brand: "",
+    price: "",
+    photos: [
+      {
+        photo: "",
+        color: "",
+      },
+    ],
+    cover_photo: "",
+    brand: "",
+  });
 
   const addNewCarHandler = async (event: FormEvent) => {
     event.preventDefault();
-    const enteredModel = inputModel.current?.value;
-    const enteredPrice = inputPrice.current?.value;
-    const enteredLogoBrand = inputLogoBrand.current?.value;
-    const enteredBrand = inputBrand.current?.value;
-    const enteredCoverPhoto = inputCover_photo.current?.value;
-    if (
-      !enteredModel ||
-      !enteredPrice ||
-      !enteredLogoBrand ||
-      !enteredBrand ||
-      !enteredCoverPhoto
-    ) {
-      return toast("Please, enter all information 😉");
-    }
-    const newCar = {
-      model: enteredModel,
-      price: enteredPrice,
-      brand: enteredBrand,
-      period: optionsState,
-      logo_brand: enteredLogoBrand,
-      cover_photo: enteredCoverPhoto,
-      photos: photos,
-    };
-
-    setPhotos([]);
-
-    console.log(
-      inputImage3.current?.value,
-      inputImage2.current?.value,
-      inputImage1.current?.value
-    );
+    console.log(inputsValues);
     /*
     const data = await fetch("/api/cars", {
       method: "POST",
@@ -58,6 +41,24 @@ const CarForm: React.FC = () => {
         "Content-Type": "application/json",
       },
     });*/
+  };
+
+  const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
+    const target = event.target;
+    const name = target.name;
+    const value = target.value;
+    console.log(name);
+
+    const isImage = name.match(/photo/g);
+    const isColor = name.match(/color/g);
+
+    if(isImage && isColor){
+      setPhotos((state) => [...state, {photo: value, color: value}])
+    }
+
+    setInputsValues((state) => {
+      return { ...state, [name]: value, period: optionsState };
+    });
   };
 
   return (
@@ -77,47 +78,62 @@ const CarForm: React.FC = () => {
           <styles.Input
             type="text"
             id="model"
+            name="model"
             placeholder="Model"
-            ref={inputModel}
+            onChange={handleInputChange}
           />
           <styles.Input
             type="text"
             id="model"
+            name="cover_photo"
             placeholder="Cover photo"
-            ref={inputCover_photo}
+            onChange={handleInputChange}
           />
           <styles.Input
             type="text"
             id="brand"
+            name="brand"
             placeholder="Brand"
-            ref={inputBrand}
+            onChange={handleInputChange}
           />
           <styles.Input
             type="text"
             id="price"
+            name="price"
             placeholder="Price"
-            ref={inputPrice}
+            onChange={handleInputChange}
           />
           <styles.Input
             type="url"
             id="logo_brand"
+            name="logo_brand"
             placeholder="Logo Brand"
-            ref={inputLogoBrand}
+            onChange={handleInputChange}
           />
         </styles.AreaInput>
         <styles.AreaControl>
           <h6>Imagens: </h6>
-          <InputImage placeholder="Image 1" />
-          <InputImage placeholder="Image 2" />
-          <InputImage placeholder="Image 3" />
+          <InputImage
+            placeholder="Image 1"
+            name="photo"
+            onChange={handleInputChange}
+          />
+          <InputImage
+            placeholder="Image 2"
+            name="photo"
+            onChange={handleInputChange}
+          />
+          <InputImage
+            placeholder="Image 3"
+            name="photo"
+            onChange={handleInputChange}
+          />
           <h6>Period: </h6>
           <styles.Select
             defaultValue="Day"
             onChange={(event) => setOptionsState(event.target.value)}
           >
-            <option selected value="Day">
-              Day
-            </option>
+            <option value="Day">Day</option>
             <option value="Year">Year</option>
             <option value="Month">Month</option>
           </styles.Select>

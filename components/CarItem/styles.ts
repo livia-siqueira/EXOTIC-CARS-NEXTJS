@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { FiMoreHorizontal, MdAttachMoney } from "../../shared/Icons/";
 
 export const Container = styled.li`
   list-style: none;
@@ -20,16 +21,15 @@ export const Button = styled.button`
 export const ContainerNames = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: left;
   text-align: left;
 `;
 
 export const Model = styled.h6`
   font-weight: lighter;
-  font-size: 1rem;
+  color: ${({ theme }) => theme.gray.grayDark};
+  font-size: 1.1rem;
   font-variant: small-caps;
-  font-family: "Segoe UI, Ligth";
+  font-family: "Segoe UI";
 `;
 
 export const Price = styled.span`
@@ -40,15 +40,35 @@ export const Price = styled.span`
 
 export const Period = styled.span`
   font-weight: normal;
+  font-style: italic;
   font-size: 0.8rem;
   color: ${({ theme }) => theme.gray.grayDark};
 `;
 
 export const Brand = styled.h4`
-  font-size: 1rem;
+  font-size: 1.1rem;
 `;
 
+export const IconMoney = styled(MdAttachMoney)`
+  width: 1rem;
+  height: 1.7rem;
+  margin-right: -2px;
+  color: ${({ theme }) => theme.gray.grayDark};
+`;
 export const ContainerPricePeriod = styled.div`
-  margin-left: 70%;
-  margin-top: auto;
+  width: 90%;
+  text-align: right;
+`;
+
+export const Icon = styled(FiMoreHorizontal)`
+  color: ${({ theme }) => theme.gray.grayLigth_4};
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 1rem;
+`;
+
+export const HeaderItem = styled.header`
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 `;
