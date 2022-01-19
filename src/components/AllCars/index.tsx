@@ -1,4 +1,3 @@
-import { GetServerSideProps } from "next";
 import { CarItem } from "..";
 import { Car} from "../../shared/types";
 import * as styles from "./styles";

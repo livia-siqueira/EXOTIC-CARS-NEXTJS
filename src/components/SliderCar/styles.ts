@@ -7,6 +7,11 @@ interface image {
 
 export const Container = styled.div`
   width: 100%;
+
+  @media(max-width: 1000px){
+    margin-top: 200px;
+  }
+
 `;
 
 export const Image = styled.img`
@@ -26,7 +31,12 @@ export const Slider = styled(Swiper)`
   @media (max-width: 300px) {
     width: 120px;
     height: auto;
-    margin: 0 auto;
+    margin: 0px auto;
+  }
+  @media (max-width: 600px) {
+    width: 80%;
+    height: auto;
+    margin: 80px auto;
   }
 `;
 
@@ -97,16 +107,12 @@ export const ButtonsSlider = styled.button<Button>`
   color: white;
   top: 800px;
   bottom: 0px;
-  @media (max-width: 1000px) {
-    margin-left: 1%;
-    margin-right: 1%;
-  }
-  @media (max-width: 600px) {
+  @media (max-width: 1335px) {
     width: 2rem;
     height: 2rem;
     padding: 2px;
-    margin-left: 2%;
-    margin-right: 2%;
+    margin-left: 0%;
+    margin-right: 0%;
   }
 `;
 
