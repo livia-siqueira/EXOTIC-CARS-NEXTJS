@@ -5,20 +5,22 @@ interface PropsButton {
 }
 
 export const Button = styled.button<PropsButton>`
-  margin-top: 2rem;
-  max-width: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 177px;
+  height: 50px;
   padding: 1rem;
   color: ${({ theme, isCompleted }) =>
     isCompleted ? theme.white : theme.gray.grayDark};
-  border-radius: 1rem;
+  border-radius: 1.6rem;
   background-color: ${({ theme, isCompleted }) =>
     isCompleted ? theme.gray.grayDark : "transparent"};
   border: 1px solid;
   border-color: ${({ theme, isCompleted }) =>
     isCompleted ? "transparent" : theme.gray.grayDark};
-  font-weight: 400;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-variant: small-caps;
+  font-weight: lighter;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 1rem;
   & + & {
     margin-left: 20px;
@@ -31,5 +33,12 @@ export const Button = styled.button<PropsButton>`
       !isCompleted ? theme.white : theme.gray.grayDark};
     border-color: ${({ theme, isCompleted }) =>
       !isCompleted ? "transparent" : theme.gray.grayDark};
+  }
+
+  @media(max-width: 1000px){
+    max-width: 100px;
+    & + & {
+    margin: 0;
+  }
   }
 `;

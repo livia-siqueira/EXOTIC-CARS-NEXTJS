@@ -1,6 +1,7 @@
 import { Car } from "../../shared/types";
 import * as styles from "./styles";
 import { useRouter } from "next/router";
+import Image from "next/image";
 
 const CarItem: React.FC<{ car: Car }> = ({ car }) => {
   const router = useRouter();
@@ -18,7 +19,7 @@ const CarItem: React.FC<{ car: Car }> = ({ car }) => {
         <styles.Icon>
         </styles.Icon>
         </styles.HeaderItem>
-        <img src={car.cover_photo} />
+        <Image src={car.cover_photo} width={260} height={100} layout="intrinsic"/>
         <styles.ContainerPricePeriod>
           <styles.Price><styles.IconMoney/>{car.price}</styles.Price>
           <styles.Period>/{car.period}</styles.Period>

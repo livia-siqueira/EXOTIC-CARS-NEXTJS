@@ -17,16 +17,15 @@ export const SliderCars: React.FC<{
   const btPrev = useRef<HTMLButtonElement>(null);
   const qtdImage : number = images ? images.length : 0;
 
-  console.log(ImagesCar, indexActive)
   return (
     <>
       {images?.length !== 1 && (
         <>
           <s.ButtonsSlider direction="left" ref={btPrev}>
-              <AiOutlineArrowLeft/>
+              <AiOutlineArrowLeft size={22}/>
           </s.ButtonsSlider>
           <s.ButtonsSlider direction="right" ref={btNext}>
-              <AiOutlineArrowRight/>
+              <AiOutlineArrowRight size={22}/>
           </s.ButtonsSlider>
         </>
       )}

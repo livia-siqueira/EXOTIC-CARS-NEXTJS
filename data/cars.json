@@ -1,174 +1,170 @@
 [
   {
     "id": "1",
-    "model": "california",
+    "model": "California",
     "brand": "Ferrari",
     "price": "725",
-    "period": "day",
     "logo_brand": "https://i.ibb.co/yNXhcSx/logoFerrari.png",
-    "cover_photo": "https://i.ibb.co/nQy93vJ/Ferrari.png",
     "photos": [
       {
-        "color": "yellow",
-        "photo": "https://i.ibb.co/x5Kyv2f/ferrariAmarela.png"
+        "photo": "https://i.ibb.co/x5Kyv2f/ferrariAmarela.png",
+        "color": "yellow"
       },
       {
-        "color": "red",
-        "photo": "https://i.ibb.co/vJ865Zy/CapaFerrariVermelha.png"
+        "photo": "https://i.ibb.co/vJ865Zy/CapaFerrariVermelha.png",
+        "color": "red"
       },
-      { "color": "gray", "photo": "https://i.ibb.co/SdMmhFb/ferraricinza.png" }
-    ]
+      { "photo": "https://i.ibb.co/SdMmhFb/ferraricinza.png", "color": "gray" }
+    ],
+    "period": "Day",
+    "cover_photo": "https://i.ibb.co/nQy93vJ/Ferrari.png"
   },
   {
     "id": "2",
-    "model": "california",
+    "model": "911 Turbo S",
     "brand": "Ferrari",
     "price": "725",
-    "period": "day",
-    "logo_brand": "https://i.ibb.co/yNXhcSx/logoFerrari.png",
-    "cover_photo": "https://i.ibb.co/nQy93vJ/Ferrari.png",
+    "logo_brand": "https://i.ibb.co/5Gb5s8z/porsheLaranja.png",
     "photos": [
       {
-        "color": "yellow",
-        "photo": "https://i.ibb.co/x5Kyv2f/ferrariAmarela.png"
+        "photo": "https://i.ibb.co/x5Kyv2f/ferrariAmarela.png",
+        "color": "yellow"
+      },
+      { "photo": "https://i.ibb.co/SdMmhFb/ferraricinza.png", "color": "gray" }
+    ],
+    "period": "Day",
+    "cover_photo": "https://i.ibb.co/nQy93vJ/Ferrari.png"
+  },
+  {
+    "id": "3",
+    "model": "M1 Competition",
+    "brand": "BMW",
+    "price": "825",
+    "logo_brand": "https://i.ibb.co/2FLvM5s/BMWBranca.png",
+    "photos": [
+      { "photo": "https://i.ibb.co/FK9cnnF/bmwbranco.png", "color": "white" }
+    ],
+    "period": "Day",
+    "cover_photo": "https://i.ibb.co/yNXhcSx/logoFerrari.png"
+  },
+  {
+    "id": "4",
+    "model": "911 GT3 RS",
+    "brand": "Porsche",
+    "price": "825",
+    "logo_brand": "https://i.ibb.co/yNXhcSx/logoFerrari.png",
+    "photos": [
+      {
+        "photo": "https://i.ibb.co/x5Kyv2f/ferrariAmarela.png",
+        "color": "yellow"
       },
       {
-        "color": "red",
-        "photo": "https://i.ibb.co/vJ865Zy/CapaFerrariVermelha.png"
+        "photo": "https://i.ibb.co/vJ865Zy/CapaFerrariVermelha.png",
+        "color": "red"
       },
-      { "color": "gray", "photo": "https://i.ibb.co/SdMmhFb/ferraricinza.png" }
-    ]
-  },
-  { "id": 3, "email": "livia", "password": "livia" },
-  {
-    "id": 4,
-    "model": "Mol",
-    "brand": "Marca",
-    "price": "Price",
-    "logo_brand": "Brand",
-    "photos": [],
-    "period": "",
-    "cover_photo": ""
+      { "photo": "https://i.ibb.co/SdMmhFb/ferraricinza.png", "color": "gray" }
+    ],
+    "period": "Day",
+    "cover_photo": "https://i.ibb.co/MpPkxSG/porsheGT3.png"
   },
   {
-    "id": 5,
-    "model": "",
-    "brand": "Marca",
-    "price": "Price",
-    "logo_brand": "Brand",
-    "photos": [],
-    "cover_photo": ""
+    "id": "5",
+    "model": "4C SPIDER",
+    "brand": "Alfa Romeo",
+    "price": "825",
+    "logo_brand": "https://i.ibb.co/yNXhcSx/logoFerrari.png",
+    "photos": [
+      {
+        "photo": "https://i.ibb.co/x5Kyv2f/ferrariAmarela.png",
+        "color": "yellow"
+      },
+      {
+        "photo": "https://i.ibb.co/vJ865Zy/CapaFerrariVermelha.png",
+        "color": "red"
+      },
+      { "photo": "https://i.ibb.co/SdMmhFb/ferraricinza.png", "color": "gray" }
+    ],
+    "period": "Day",
+    "cover_photo": "https://i.ibb.co/Qdn0W8W/AlfaRomeoAmarelo.png"
   },
   {
-    "id": 6,
-    "model": "california",
-    "brand": "Ferrari",
+    "id": "6",
+    "model": "AMG GTS",
+    "brand": "Mercedes-benz",
     "price": "725",
-    "logo_brand": "https://i.ibb.co/yNXhcSx/logoFerrari.png",
-    "photos": [],
-    "cover_photo": ""
-  },
-  {
-    "id": 7,
-    "model": "n n",
-    "brand": "bhnjm",
-    "price": "bhnjm",
-    "logo_brand": "https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg",
+    "logo_brand": "https://i.ibb.co/CKR9HHW/logo.png",
     "photos": [
-      "https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg"
-    ],
-    "cover_photo": ""
-  },
-  {
-    "id": 8,
-    "model": "n n",
-    "brand": "bhnjm",
-    "price": "bhnjm",
-    "logo_brand": "https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg",
-    "photos": [
-      "https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg"
-    ],
-    "period": "Day",
-    "cover_photo": ""
-  },
-  {
-    "id": 9,
-    "model": "n n",
-    "brand": "bhnjm",
-    "price": "bhnjm",
-    "logo_brand": "https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg",
-    "photos": [
-      "https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg",
       {
-        "photo": "https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg",
-        "color": "Red"
+        "photo": "https://i.ibb.co/x5Kyv2f/ferrariAmarela.png",
+        "color": "yellow"
       },
       {
-        "photo": "https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg",
-        "color": "Red"
+        "photo": "https://i.ibb.co/vJ865Zy/CapaFerrariVermelha.png",
+        "color": "red"
+      },
+      { "photo": "https://i.ibb.co/SdMmhFb/ferraricinza.png", "color": "gray" }
+    ],
+    "period": "Day",
+    "cover_photo": "https://i.ibb.co/NZhLBHR/MercedesCinza.png"
+  },
+  {
+    "id": "7",
+    "model": "WRAITH",
+    "brand": "Rolls-Royce",
+    "price": "725",
+    "logo_brand": "https://i.ibb.co/CKR9HHW/logo.png",
+    "photos": [
+      { "photo": "https://i.ibb.co/0yr0CyM/aventadorred.png", "color": "red" },
+      {
+        "photo": "https://i.ibb.co/562n6NV/aventador-Laranja-Certo.png",
+        "color": "orange"
+      },
+      {
+        "photo": "https://i.ibb.co/4NmCyds/aventadorcinza.png",
+        "color": "gray"
       }
     ],
     "period": "Day",
-    "cover_photo": ""
+    "cover_photo": "https://i.ibb.co/cTrTdvT/RoyalVermelho.png"
   },
   {
-    "id": 10,
-    "model": "n n",
-    "brand": "bhnjm",
-    "price": "bhnjm",
-    "logo_brand": "https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg",
+    "id": "8",
+    "model": "AVENTADOR",
+    "brand": "Lamborghini",
+    "price": "925",
+    "logo_brand": "https://i.ibb.co/CKR9HHW/logo.png",
     "photos": [
-      "https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg",
+      { "photo": "https://i.ibb.co/0yr0CyM/aventadorred.png", "color": "red" },
       {
-        "photo": "https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg",
-        "color": "Red"
+        "photo": "https://i.ibb.co/562n6NV/aventador-Laranja-Certo.png",
+        "color": "orange"
       },
       {
-        "photo": "https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg",
-        "color": "Red"
+        "photo": "https://i.ibb.co/4NmCyds/aventadorcinza.png",
+        "color": "gray"
       }
     ],
     "period": "Day",
-    "cover_photo": ""
+    "cover_photo": "https://i.ibb.co/Mn5N18b/lamborLaranja.png"
   },
   {
-    "id": 11,
-    "model": "n n",
-    "brand": "bhnjm",
-    "price": "bhnjm",
-    "logo_brand": "https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg",
+    "id": "9",
+    "model": "Hudray",
+    "brand": "Pagani",
+    "price": "925",
+    "logo_brand": "https://i.ibb.co/CKR9HHW/logo.png",
     "photos": [
-      "https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg",
+      { "photo": "https://i.ibb.co/0yr0CyM/aventadorred.png", "color": "red" },
       {
-        "photo": "https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg",
-        "color": "Red"
+        "photo": "https://i.ibb.co/562n6NV/aventador-Laranja-Certo.png",
+        "color": "orange"
       },
       {
-        "photo": "https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg",
-        "color": "Red"
+        "photo": "https://i.ibb.co/4NmCyds/aventadorcinza.png",
+        "color": "gray"
       }
     ],
     "period": "Day",
-    "cover_photo": ""
-  },
-  {
-    "id": 12,
-    "model": "n n",
-    "brand": "bhnjm",
-    "price": "bhnjm",
-    "logo_brand": "https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg",
-    "photos": [
-      "https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg",
-      {
-        "photo": "https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg",
-        "color": "Red"
-      },
-      {
-        "photo": "https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg",
-        "color": "Red"
-      }
-    ],
-    "period": "Day",
-    "cover_photo": ""
+    "cover_photo": "https://i.ibb.co/kDZTdnw/pagani-verde.png"
   }
 ]

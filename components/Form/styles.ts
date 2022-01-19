@@ -1,26 +1,27 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  max-width: 350px;
-  min-height: 40vh;
+  max-width: 450px;
+  min-height: 50vh;
   border-radius: 12px;
-  margin: 0px auto;
-  background: ${({ theme }) => theme.detailsButtonPurple};
+  margin: 5rem auto;
   box-shadow: 0px 10px 10px ${({ theme }) => theme.gray.grayMedium};
-  background-color: white;
+  background: linear-gradient(transparent, #FFFFFF 0%, ${({theme}) => theme.gray.grayLigth_5});
   padding: 2rem;
+
+  @media(max-width: 700px){
+    height: 100vh;
+    border-radius: 0;
+    width: 100%;
+  }
+  @media(max-width: 1000px){
+    height: 60vh;
+    border-radius: 0;
+    margin: 7rem auto;
+  }
   
 `;
 
-export const HeaderForm = styled.header`
-  //background: linear-gradient(
-    //0deg,
-    //rgba(123, 137, 244, 1) 8%,
-    //rgba(212, 212, 212, 1) 99%
-  //);
-  //height: 20%;
-  //padding-top: 5px;
-`;
 
 export const Actions = styled.div`
   display: flex;
@@ -28,55 +29,33 @@ export const Actions = styled.div`
   gap: 10px;
   align-items: center;
   width: 100%;
+  margin-top: 1.5rem;
 `;
 
 export const Form = styled.form`
-  margin: 20% auto;
+  margin: 10px auto;
   margin-bottom: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  @media(max-width: 1000px){
+    height: 50%;
+  }
 `;
 
 export const Control = styled.div`
-  margin: 12px auto;
+  margin: 0px auto;
   width: 80%;
   display: flex;
   justify-content: center;
   position: relative;
-  
-  input {
-    border: none;
-    border-bottom: 1px solid ${({ theme }) => theme.gray.grayLigth_4};
-    padding-left: 20px;
-    width: 100%;
-    height: 2rem;
-    font-size: 0,5rem;
-    outline: none;
-
-    ::placeholder {
-      font-style: italic;
-      color: ${({ theme }) => theme.gray.grayLigth_4};
-    }
-  }
 `;
 
 export const Title = styled.h2`
   position: relative;
-
-  &::before{
-    content: '';
-    position: absolute;
-    height: 4px;
-    width: 25px;
-    bottom: 3px;
-    left: 0%;
-    border-radius: 8px;
-    background-color: solid ${({ theme }) => theme.detailsButtonPurple} ;
-    }
-`;
-
-export const Background = styled.div`
- 
+  color: ${({theme}) => theme.gray.grayDark};
+  border-bottom: 3px solid ${({theme}) => theme.detailsButtonPurple};
+  width: 20px;
+  font-weight: lighter;
 `;

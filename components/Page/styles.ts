@@ -12,7 +12,6 @@ export const Container = styled.div`
 
   @media (max-width: 1000px) {
     flex-direction: column;
-    gap: 80px;
     padding-top: 1rem;
   }
 `;
@@ -26,6 +25,9 @@ const breatheAnimation = keyframes`
 export const Section = styled.section`
   text-align: center;
   max-width: 30rem;
+  @media(max-width: 1000px){
+   width: 100vw;
+  }
 `;
 
 export const Aside = styled.aside`
@@ -37,6 +39,12 @@ export const Aside = styled.aside`
   animation-name: ${breatheAnimation};
   animation-duration: 1s;
   animation-iteration-count: initial;
+
+  @media(max-width: 1000px){
+   width: 100%;
+   height: 100%;
+   margin-top: 1.5rem;
+  }
 `;
 
 export const Title = styled.h1`
@@ -45,7 +53,23 @@ export const Title = styled.h1`
   font-style: italic;
   text-shadow: 2px 5px 15px ${({ theme }) => theme.gray.grayLigth_4};
   color: ${({ theme }) => theme.gray.grayDark};
+  @media(max-width: 1000px){
+    margin-top: 30%;
+  }
 `;
+
+export const ContainerButton = styled.div` 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+
+  @media(max-width: 1000px){
+    flex-direction: column;
+    gap: 20px;
+  }
+
+`
 
 export const Description = styled.p`
   font-size: 2rem;

@@ -22,4 +22,8 @@ export interface Car {
     photos: Photo[];
 }
 
+export interface User {
+    email: string;
+    password: string;
+}
 

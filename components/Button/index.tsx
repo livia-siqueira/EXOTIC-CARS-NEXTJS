@@ -1,16 +1,17 @@
 import { ButtonHTMLAttributes } from 'react';
+import { IconType } from 'react-icons';
 import * as styles from './styles'
 
 
+
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
-    title: string;
-    isCompleted: boolean
+    isCompleted: boolean;
 }
 
-const Button : React.FC<Props> = ({title, isCompleted, onClick}) => {
+const Button : React.FC<Props> = ({isCompleted, onClick, children}) => {
     return (
         <styles.Button isCompleted={isCompleted} onClick={onClick}>
-            {title}
+          {children}
         </styles.Button>
     )
 }

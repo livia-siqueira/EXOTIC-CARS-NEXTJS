@@ -8,7 +8,7 @@ interface Button {
 export const Button = styled.button<Button>`
   color: ${({ theme }) => theme.detailsButtonPurple};
   border: ${({ isBorder, theme }) =>
-      isBorder ? theme.detailsButtonPurple : theme.white}
+      isBorder ? theme.detailsButtonPurple : "transparent"}
     1px solid;
   background-color: transparent;
   font-weight: bold;

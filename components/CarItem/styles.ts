@@ -8,9 +8,10 @@ export const Container = styled.li`
     padding-box;
   padding: 1rem;
   margin-bottom: 20px;
-  width: 250px;
+  max-width: 260px;
   height: 223px;
-  margin-left: 20px;
+  flex: 0 1 250px;
+  margin-left: 12px;
 `;
 
 export const Button = styled.button`
