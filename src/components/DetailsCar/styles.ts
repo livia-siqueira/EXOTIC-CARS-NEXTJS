@@ -10,6 +10,14 @@ export const Container = styled.div`
       #ffffff 0%,
       ${({ theme }) => theme.gray.grayLigth_5} 100%
     );
+
+    @media(max-width: 1000px){
+      height: 100vh;
+      display: flex;
+      justify-content: center ;
+    }
+
+
 `;
 
 export const Title = styled.div`
@@ -38,11 +46,11 @@ export const ContainerButton = styled.div`
 
 export const ImageBig = styled(Image)``;
 
-export const Name = styled.h1`
+export const Name = styled.h2`
   font-size: 2rem;
 `;
 
-export const Price = styled.h4`
+export const Price = styled.p`
   font: normal normal 300 2rem Segoe UI;
 `;
 

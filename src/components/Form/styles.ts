@@ -15,7 +15,7 @@ export const Container = styled.div`
     width: 100%;
   }
   @media(max-width: 1000px){
-    height: 60vh;
+    height: 100vh;
     border-radius: 0;
     margin: 7rem auto;
   }

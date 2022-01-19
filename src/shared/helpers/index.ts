@@ -11,3 +11,4 @@ export const compareHashPassword = async(passwordNormal: string, passowrdHas: st
     const res = await compare(passwordNormal, passowrdHas)
     return res;
 }
+

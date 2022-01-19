@@ -24,7 +24,7 @@ export const Title = styled.h2`
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 `;
 
-export const TitleDiferent = styled.h4`
+export const TitleDiferent = styled.span`
   margin-left: 5px;
   font-size: 1rem;
   font-weight: lighter;
@@ -58,7 +58,7 @@ export const Menu = styled.div`
 
   @media (max-width: 1000px) {
     top: 8%;
-    right: 25%;
+    right: 15%;
   }
 `;
 
@@ -94,6 +94,9 @@ export const Navigation = styled.nav`
 
 export const AreaSearchClicked = styled.div`
   position: absolute;
-  top: 90px;
-  right: 0;
+  top: 70px;
+  right: 80px;
+  @media (max-width: 500px) {
+    display: grid;
+  }
 `;

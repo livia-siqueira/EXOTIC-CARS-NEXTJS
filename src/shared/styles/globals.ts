@@ -1,15 +1,13 @@
-import styled, { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from "styled-components";
 
 const Global = createGlobalStyle`
 html,
 body,
-#root {
+#__next {
   padding: 0;
   margin: 0;
   font-family:'Segoe UI', 'Helvetica', Geneva, Verdana, sans-serif;
   height: 100%;
-
- 
 }
 html{
         @media (max-width: 1080px){

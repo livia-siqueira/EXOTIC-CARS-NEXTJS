@@ -13,11 +13,12 @@ export const Local_Details = styled.div`
     padding: 7px;
     width: 300px;
   }
-  @media (max-width: 350px) {
+  @media (max-width: 450px) {
     padding: 7px;
     width: 200px;
     flex-direction: column;
     align-items: center;
+    background-color: transparent;
   }
 `;
 
@@ -31,6 +32,9 @@ export const Button = styled.button`
   text-align: center;
   width: 30px;
   height: 30px;
+  @media (max-width: 450px) {
+    display: none;
+  }
 `;
 
 export const Content_Local_Details = styled.span`

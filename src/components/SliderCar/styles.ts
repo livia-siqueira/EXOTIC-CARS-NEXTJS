@@ -97,6 +97,10 @@ export const ButtonsSlider = styled.button<Button>`
   color: white;
   top: 800px;
   bottom: 0px;
+  @media (max-width: 1000px) {
+    margin-left: 1%;
+    margin-right: 1%;
+  }
   @media (max-width: 600px) {
     width: 2rem;
     height: 2rem;

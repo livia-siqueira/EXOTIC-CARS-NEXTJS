@@ -5,7 +5,11 @@ import { FiCheck } from "react-icons/fi";
 export const Container = styled.div`
   max-width: 60%;
   min-height: 60vh;
-  background: linear-gradient(transparent, #FFFFFF 0%, ${({theme})=> theme.gray.grayLigth_5} 100%);
+  background: linear-gradient(
+    transparent,
+    #ffffff 0%,
+    ${({ theme }) => theme.gray.grayLigth_5} 100%
+  );
   box-shadow: 2px 2px 8px gray;
   border-radius: 13px;
   margin: 5rem auto;
@@ -20,7 +24,10 @@ export const Container = styled.div`
   @media (max-width: 800px) {
     grid-template-columns: 1fr;
     padding-top: 10px;
-    min-height: 90vh;
+    min-height: 100vh;
+    max-width: 100%;
+    margin: 0;
+    border-radius: 0;
   }
 `;
 
@@ -32,7 +39,7 @@ export const Form = styled.form`
   height: 100%;
   gap: 20px;
   @media (max-width: 600px) {
-   flex-direction: column;
+    flex-direction: column;
   }
 `;
 
@@ -48,8 +55,6 @@ export const Title = styled.h2`
   font-weight: lighter;
 `;
 
-
-
 export const ContainerImage = styled.div`
   height: 100%;
   display: flex;
@@ -62,7 +67,7 @@ export const ContainerImage = styled.div`
 
 export const Label = styled.label`
   font-size: 0.8rem;
-  color: ${({theme}) => theme.gray.grayDark};
+  color: ${({ theme }) => theme.gray.grayDark};
   font-style: italic;
 `;
 
@@ -70,7 +75,6 @@ export const Img = styled(Image)`
   border-radius: 80%;
   opacity: 0.7;
 `;
-
 
 export const AreaControl = styled.div``;
 
@@ -83,10 +87,11 @@ export const Select = styled.select`
   padding-left: 0.4rem;
   box-shadow: 1px 1px 4px gray;
   margin-left: 0.3rem;
-  color: ${({theme}) => theme.gray.grayLigth_6}
+  color: ${({ theme }) => theme.gray.grayLigth_6};
 `;
 
 export const Button = styled.div`
+  display: flex;
   text-align: center;
   width: 100%;
   height: 100%;
@@ -94,11 +99,12 @@ export const Button = styled.div`
   position: relative;
   top: 3rem;
   right: 10rem;
+
   @media (max-width: 800px) {
     left: 8rem;
-    top: -1rem;
-    width: 60%;
-    height: 60%;
+    top: 1rem;
+    width: 150px;
+    height: 30px;
   }
 `;
 

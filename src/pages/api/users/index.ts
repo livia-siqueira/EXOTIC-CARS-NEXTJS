@@ -19,12 +19,13 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
       email,
       password: passwordHASH,
     };
-    const userExist = data.find(async (user) => {
-      return (
-        (await compareHashPassword(user.password, passwordHASH)) &&
-        user.email === email
-      );
+    
+    const userExist = data.find((user) => {
+     if(user.email === email){
+       return user;
+     }
     });
+   
     if (userExist) {
       res.status(422).json({ message: "User exist", user: userExist });
       return;

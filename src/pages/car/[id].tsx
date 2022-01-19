@@ -8,7 +8,7 @@ interface Props {
   carSelected: Car;
 }
 
-const Car: React.FC<Props> = ({ carSelected }) => {
+const PageCar: React.FC<Props> = ({ carSelected }) => {
   return <DetailsCar carSelected={carSelected} />;
 };
 
@@ -39,4 +39,4 @@ export async function getStaticPaths() {
   };
 }
 
-export default Car;
+export default PageCar;

@@ -29,6 +29,10 @@ const FormAuth: React.FC = () => {
     setIsLogin((prev) => !prev);
   };
 
+  const Back = () => {
+    router.replace('/');
+  }
+
   const loginUser = async (event: FormEvent<HTMLButtonElement>) => {
     event.preventDefault();
     const result = (await signIn("credentials", {
@@ -37,7 +41,12 @@ const FormAuth: React.FC = () => {
       redirect: false,
     })) as unknown as SignInResponse;
 
-    if(result.status === 200){
+    if(!inputValues.email || !inputValues.password){
+      return toast("Please, enter all information!");
+    }
+
+
+    if(!result.error){
       return router.replace('/car');
     }
 
@@ -54,11 +63,11 @@ const FormAuth: React.FC = () => {
 
     try {
       const response = await api.post("/users", { user: newUser });
-      if (response.status === 201) {
+      if (response.status === 200) {
         return toast("User created with success");
       }
       if (response.status === 401) {
-        return toast("User created with success");
+        return toast("User exist");
       }
     } catch (error) {}
   };
@@ -105,6 +114,7 @@ const FormAuth: React.FC = () => {
           <styles.Actions>
             <ButtonAuth
               page="Login"
+              type="submit"
               title={isLogin ? "Login" : "Create Account"}
               isBorder={true}
               onClick={isLogin ? loginUser : createNewUser}
@@ -117,7 +127,8 @@ const FormAuth: React.FC = () => {
             />
             <ButtonAuth
               page="Header"
-              onClick={changeFunctionButton}
+              onClick={Back}
+              type="button"
               title="Back"
               isBorder={true}
             />

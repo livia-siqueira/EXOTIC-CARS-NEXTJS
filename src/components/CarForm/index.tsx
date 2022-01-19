@@ -4,6 +4,7 @@ import api from "../../services/api";
 import { Car } from "@shared/index";
 import {Input, InputImage, ButtonAuth} from "@components/index";
 import * as styles from "./styles";
+import { useRouter } from "next/router";
 
 interface PropsInputsImages {
   photo1: string;
@@ -24,7 +25,7 @@ const CarForm: React.FC = () => {
     photo3: "",
     color3: "",
   });
-
+  const router = useRouter();
   const [inputsValues, setInputsValues] = useState<Omit<Car, "id" | "photos">>({
     model: "",
     period: "",
@@ -33,6 +34,10 @@ const CarForm: React.FC = () => {
     cover_photo: "",
     brand: "",
   });
+
+  const Back = () =>{
+    router.push('/');
+  }
 
   const addNewCarHandler = async (event: FormEvent) => {
     event.preventDefault();
@@ -191,6 +196,13 @@ const CarForm: React.FC = () => {
               title="Save Car"
               page="Auth"
               type="submit"
+            />
+              <ButtonAuth
+              isBorder={true}
+              title="Back"
+              page="Auth"
+              type="button"
+              onClick={Back}
             />
           </styles.Button>
         </styles.AreaControl>
