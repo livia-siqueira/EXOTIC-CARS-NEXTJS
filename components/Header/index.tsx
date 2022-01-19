@@ -3,17 +3,13 @@ import ButtonAuth from "../ButtonAuth";
 import * as styles from "./styles";
 import { Location } from "..";
 import { useCallback, useEffect, useState } from "react";
-import { AiOutlineSearch, FiMenu } from "../../shared/Icons";
+import { AiOutlineSearch, FiMenu } from "../../shared/icons";
 import {useSession, signOut} from 'next-auth/react'
 
 
 const MenuLateral: React.FC = () => {
   const [menu, setMenu] = useState<boolean>(false);
   const [location, setLocation] = useState<boolean>(false);
-
-  
-  
-
   const changeState = useCallback(() => {
     menu ? setMenu(false) : setMenu(true);
   }, [menu]);

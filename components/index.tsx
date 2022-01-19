@@ -8,6 +8,7 @@ import CarItem from "./CarItem";
 import Page from './Page';
 import Button from "./Button";
 import Location from "./Location";
+//export InputImage from "./InputImage";
  export {
      Form,
      AllCars,
