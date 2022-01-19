@@ -1,10 +1,16 @@
 import {readFileSync} from 'fs'
 import {join} from 'path';
-import { User } from '@shared/index';
+import { Car, User } from '@shared/index';
 
 export const allUsers = () => {
     const pathFile = buildCars("users.json");
     const data: User[] = extractCars(pathFile);
+    return data;
+}
+
+export const allCars = () => {
+    const pathFile = buildCars("cars.json");
+    const data: Car[] = extractCars(pathFile);
     return data;
 }
 

@@ -11,6 +11,8 @@ const Page: React.FC = () => {
   const changePageCatalog = () => {
     return router.push("/car");
   };
+
+  
   return (
     <styles.Container>
       <styles.Section>

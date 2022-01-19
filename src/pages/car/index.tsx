@@ -1,9 +1,9 @@
 import { useRouter } from "next/router";
 import { AllCars, Button } from "@components/index";
-import api from "../../services/api";
-import { RootObject } from "@shared/index";
+import { Car, RootObject } from "@shared/index";
 import { GetServerSideProps } from "next";
 import { getSession } from "next-auth/client";
+import { allCars } from "@shared/index";
 
 const PageCars = ({ cars }: RootObject) => {
   const router = useRouter();
@@ -26,14 +26,12 @@ const PageCars = ({ cars }: RootObject) => {
 
 
 export const getServerSideProps: GetServerSideProps = async(context) => {
-  const data = await api.get("/cars");
-  const cars: RootObject = data.data.cars;
+  const cars: Car[] = allCars();
   const session = await getSession({req: context.req})
-
   if(!session){
       return{
           redirect: {
-              destination: '/auth',
+              destination: '/',
               permanent: false
           }
       }
