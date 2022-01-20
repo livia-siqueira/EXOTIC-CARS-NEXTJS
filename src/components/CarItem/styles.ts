@@ -57,8 +57,9 @@ export const IconMoney = styled(MdAttachMoney)`
   color: ${({ theme }) => theme.gray.grayDark};
 `;
 export const ContainerPricePeriod = styled.div`
-  width: 90%;
+  width: 100%;
   text-align: right;
+  margin-top: 20px;
 `;
 
 export const Icon = styled(FiMoreHorizontal)`
@@ -73,3 +74,9 @@ export const HeaderItem = styled.header`
   justify-content: space-between;
   align-items: flex-start;
 `;
+
+export const Image = styled.div` 
+display: relative;
+  width: 100%;
+  margin-top: 20px;
+`

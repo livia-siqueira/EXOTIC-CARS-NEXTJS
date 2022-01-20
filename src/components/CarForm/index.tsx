@@ -16,24 +16,26 @@ interface PropsInputsImages {
 }
 
 const CarForm: React.FC = () => {
-  const [optionsState, setOptionsState] = useState<string>("Day");
-  const [inputsImages, setInputImages] = useState<PropsInputsImages>({
-    photo1: "",
-    color1: "",
-    photo2: "",
-    color2: "",
-    photo3: "",
-    color3: "",
-  });
-  const router = useRouter();
-  const [inputsValues, setInputsValues] = useState<Omit<Car, "id" | "photos">>({
+  const initialValuesForm = {
     model: "",
     period: "",
     logo_brand: "",
     price: "",
     cover_photo: "",
     brand: "",
-  });
+  }
+  const initialValuesImage = {
+    photo1: "",
+    color1: "",
+    photo2: "",
+    color2: "",
+    photo3: "",
+    color3: "",
+  }
+  const [optionsState, setOptionsState] = useState<string>("Day");
+  const [inputsImages, setInputImages] = useState<PropsInputsImages>(initialValuesImage)
+  const router = useRouter();
+  const [inputsValues, setInputsValues] = useState<Omit<Car, "id" | "photos">>(initialValuesForm)
 
   const Back = () =>{
     router.push('/');
@@ -61,12 +63,12 @@ const CarForm: React.FC = () => {
     });
 
     if (
-      !inputsValues.logo_brand ||
-      !inputsValues.model ||
-      !inputsValues.period ||
-      !inputsValues.cover_photo ||
-      !inputsValues.brand ||
-      !inputsValues.price
+      !inputsValues.logo_brand.trim() ||
+      !inputsValues.model.trim() ||
+      !inputsValues.period.trim() ||
+      !inputsValues.cover_photo.trim() ||
+      !inputsValues.brand.trim() ||
+      !inputsValues.price.trim()
     ) {
       return toast("Please, enter all information 😉");
     }
@@ -92,6 +94,8 @@ const CarForm: React.FC = () => {
     try {
       const response = await api.post("/cars", { car: newCar });
       if (response.status === 201) {
+        setInputsValues(initialValuesForm)
+        setInputImages(initialValuesImage)
         return toast("Car created with success");
       }
     } catch (err) {
@@ -133,12 +137,14 @@ const CarForm: React.FC = () => {
             id="model"
             name="model"
             placeholder="Model"
+            value={inputsValues.model}
             onChange={handleInputChange}
           />
           <Input
             type="url"
             id="cover_photo"
             name="cover_photo"
+            value={inputsValues.cover_photo}
             placeholder="Cover photo"
             onChange={handleInputChange}
           />
@@ -146,6 +152,7 @@ const CarForm: React.FC = () => {
             type="text"
             id="brand"
             name="brand"
+            value={inputsValues.brand}
             placeholder="Brand"
             onChange={handleInputChange}
           />
@@ -153,6 +160,7 @@ const CarForm: React.FC = () => {
             type="text"
             id="price"
             name="price"
+            value={inputsValues.price}
             placeholder="Price"
             onChange={handleInputChange}
           />
@@ -160,6 +168,7 @@ const CarForm: React.FC = () => {
             type="url"
             id="logo_brand"
             name="logo_brand"
+            value={inputsValues.logo_brand}
             placeholder="Logo Brand"
             onChange={handleInputChange}
           />
@@ -168,16 +177,19 @@ const CarForm: React.FC = () => {
           <styles.Label>Imagens: </styles.Label>
           <InputImage
             placeholder="Image 1"
+            value={inputsImages.photo1}
             name="photo1"
             onChange={handleInputChange}
           />
           <InputImage
             placeholder="Image 2"
+            value={inputsImages.photo2}
             name="photo2"
             onChange={handleInputChange}
           />
           <InputImage
             placeholder="Image 3"
+            value={inputsImages.photo3}
             name="photo3"
             onChange={handleInputChange}
           />

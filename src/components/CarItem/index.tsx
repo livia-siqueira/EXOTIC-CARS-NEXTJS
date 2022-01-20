@@ -18,13 +18,15 @@ const CarItem: React.FC<{ car: Car }> = ({ car }) => {
           </styles.ContainerNames>
           <styles.Icon></styles.Icon>
         </styles.HeaderItem>
+        <styles.Image>
         <Image
           src={car.cover_photo}
-          width={260}
+          width={300}
           height={100}
           layout="intrinsic"
           alt="Image car"
         />
+        </styles.Image>
         <styles.ContainerPricePeriod>
           <styles.Price>
             <styles.IconMoney />

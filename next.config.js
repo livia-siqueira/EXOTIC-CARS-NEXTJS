@@ -8,7 +8,8 @@ const nextConfig = {
     return config;
   },
   images: {
-    domains: ['i.ibb.co']
+    domains: ['i.ibb.co'],
+    deviceSizes: [320,640,768,1024]
   }
 
 }

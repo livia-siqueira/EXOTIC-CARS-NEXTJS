@@ -16,12 +16,12 @@
       },
       { "photo": "https://i.ibb.co/SdMmhFb/ferraricinza.png", "color": "gray" }
     ],
-    "period": "Day",
+    "period": "day",
     "cover_photo": "https://i.ibb.co/nQy93vJ/Ferrari.png"
   },
   {
     "id": "2",
-    "model": "911 Turbo S",
+    "model": "911 turbo s",
     "brand": "Ferrari",
     "price": "725",
     "logo_brand": "https://i.ibb.co/5Gb5s8z/porsheLaranja.png",
@@ -32,24 +32,24 @@
       },
       { "photo": "https://i.ibb.co/SdMmhFb/ferraricinza.png", "color": "gray" }
     ],
-    "period": "Day",
+    "period": "day",
     "cover_photo": "https://i.ibb.co/nQy93vJ/Ferrari.png"
   },
   {
     "id": "3",
-    "model": "M1 Competition",
+    "model": "m1 competition",
     "brand": "BMW",
     "price": "825",
     "logo_brand": "https://i.ibb.co/yNXhcSx/logoFerrari.png",
     "photos": [
       { "photo": "https://i.ibb.co/FK9cnnF/bmwbranco.png", "color": "white" }
     ],
-    "period": "Day",
+    "period": "day",
     "cover_photo": "https://i.ibb.co/2FLvM5s/BMWBranca.png"
   },
   {
     "id": "4",
-    "model": "911 GT3 RS",
+    "model": "911 gt3 rs",
     "brand": "Porsche",
     "price": "825",
     "logo_brand": "https://i.ibb.co/yNXhcSx/logoFerrari.png",
@@ -64,12 +64,12 @@
       },
       { "photo": "https://i.ibb.co/SdMmhFb/ferraricinza.png", "color": "gray" }
     ],
-    "period": "Day",
+    "period": "day",
     "cover_photo": "https://i.ibb.co/MpPkxSG/porsheGT3.png"
   },
   {
     "id": "5",
-    "model": "4C SPIDER",
+    "model": "4s spider",
     "brand": "Alfa Romeo",
     "price": "825",
     "logo_brand": "https://i.ibb.co/yNXhcSx/logoFerrari.png",
@@ -84,12 +84,12 @@
       },
       { "photo": "https://i.ibb.co/SdMmhFb/ferraricinza.png", "color": "gray" }
     ],
-    "period": "Day",
+    "period": "day",
     "cover_photo": "https://i.ibb.co/Qdn0W8W/AlfaRomeoAmarelo.png"
   },
   {
     "id": "6",
-    "model": "AMG GTS",
+    "model": "amg gts",
     "brand": "Mercedes-benz",
     "price": "725",
     "logo_brand": "https://i.ibb.co/CKR9HHW/logo.png",
@@ -104,12 +104,12 @@
       },
       { "photo": "https://i.ibb.co/SdMmhFb/ferraricinza.png", "color": "gray" }
     ],
-    "period": "Day",
+    "period": "day",
     "cover_photo": "https://i.ibb.co/NZhLBHR/MercedesCinza.png"
   },
   {
     "id": "7",
-    "model": "WRAITH",
+    "model": "wraith",
     "brand": "Rolls-Royce",
     "price": "725",
     "logo_brand": "https://i.ibb.co/CKR9HHW/logo.png",
@@ -124,12 +124,12 @@
         "color": "gray"
       }
     ],
-    "period": "Day",
+    "period": "day",
     "cover_photo": "https://i.ibb.co/cTrTdvT/RoyalVermelho.png"
   },
   {
     "id": "8",
-    "model": "AVENTADOR",
+    "model": "aventador",
     "brand": "Lamborghini",
     "price": "925",
     "logo_brand": "https://i.ibb.co/CKR9HHW/logo.png",
@@ -144,12 +144,12 @@
         "color": "gray"
       }
     ],
-    "period": "Day",
+    "period": "day",
     "cover_photo": "https://i.ibb.co/Mn5N18b/lamborLaranja.png"
   },
   {
     "id": "9",
-    "model": "Hudray",
+    "model": "hudray",
     "brand": "Pagani",
     "price": "925",
     "logo_brand": "https://i.ibb.co/CKR9HHW/logo.png",
@@ -164,7 +164,135 @@
         "color": "gray"
       }
     ],
-    "period": "Day",
+    "period": "day",
     "cover_photo": "https://i.ibb.co/kDZTdnw/pagani-verde.png"
+  },
+  {
+    "id": "10",
+    "model": "corvett",
+    "brand": "Chevrolet",
+    "price": "925",
+    "logo_brand": "https://i.ibb.co/CKR9HHW/logo.png",
+    "photos": [
+      { "photo": "https://i.ibb.co/0yr0CyM/aventadorred.png", "color": "Red" },
+      {
+        "photo": "https://i.ibb.co/562n6NV/aventador-Laranja-Certo.png",
+        "color": "Orange"
+      },
+      {
+        "photo": "https://i.ibb.co/4NmCyds/aventadorcinza.png",
+        "color": "Gray"
+      }
+    ],
+    "period": "day",
+    "cover_photo": "https://i.ibb.co/16rvmG3/Corvet-Branco.png"
+  },
+  {
+    "id": "11",
+    "model": "p1 gtr",
+    "brand": "Mclaren",
+    "price": "925",
+    "logo_brand": "https://i.ibb.co/CKR9HHW/logo.png",
+    "photos": [
+      { "photo": "https://i.ibb.co/0yr0CyM/aventadorred.png", "color": "Red" },
+      {
+        "photo": "https://i.ibb.co/562n6NV/aventador-Laranja-Certo.png",
+        "color": "Orange"
+      },
+      {
+        "photo": "https://i.ibb.co/4NmCyds/aventadorcinza.png",
+        "color": "Gray"
+      }
+    ],
+    "period": "day",
+    "cover_photo": "https://i.ibb.co/QcrSWBw/mcLarenAzul.png"
+  },
+  {
+    "id": "12",
+    "model": "continental gt",
+    "brand": "Bentley",
+    "price": "825",
+    "logo_brand": "https://i.ibb.co/CKR9HHW/logo.png",
+    "photos": [
+      { "photo": "https://i.ibb.co/0yr0CyM/aventadorred.png", "color": "Red" },
+      {
+        "photo": "https://i.ibb.co/562n6NV/aventador-Laranja-Certo.png",
+        "color": "Orange"
+      },
+      {
+        "photo": "https://i.ibb.co/4NmCyds/aventadorcinza.png",
+        "color": "Gray"
+      }
+    ],
+    "period": "day",
+    "cover_photo": "https://i.ibb.co/TkVMXZy/BekleyAzul.png"
+  },
+  {
+    "id": "13",
+    "model": "720s",
+    "brand": "Maclaren",
+    "price": "825",
+    "logo_brand": "https://i.ibb.co/CKR9HHW/logo.png",
+    "photos": [
+      { "photo": "https://i.ibb.co/0yr0CyM/aventadorred.png", "color": "Red" },
+      {
+        "photo": "https://i.ibb.co/562n6NV/aventador-Laranja-Certo.png",
+        "color": "Orange"
+      },
+      {
+        "photo": "https://i.ibb.co/4NmCyds/aventadorcinza.png",
+        "color": "Gray"
+      }
+    ],
+    "period": "day",
+    "cover_photo": "https://i.ibb.co/5Gb5s8z/porsheLaranja.png"
+  },
+  {
+    "id": "14",
+    "model": "gallardo",
+    "brand": "Lamborghini",
+    "price": "825",
+    "logo_brand": "https://i.ibb.co/CKR9HHW/logo.png",
+    "photos": [
+      { "photo": "https://i.ibb.co/mRNDYwf/gallardored.png", "color": "Red" },
+      {
+        "photo": "https://i.ibb.co/99J6QRM/gallardoyellowcerto.png",
+        "color": "Yellow"
+      }
+    ],
+    "period": "day",
+    "cover_photo": " https://i.ibb.co/3fpgM9N/Lamborghini-Gallardo-Amarelo.png"
+  },
+  {
+    "id": "15",
+    "model": "mustang 2019",
+    "brand": "Ford",
+    "price": "725",
+    "logo_brand": "https://i.ibb.co/CKR9HHW/logo.png  ",
+    "photos": [
+      { "photo": "https://i.ibb.co/0yr0CyM/aventadorred.png", "color": "Red" },
+      {
+        "photo": "https://i.ibb.co/4NmCyds/aventadorcinza.png",
+        "color": "Gray"
+      }
+    ],
+    "period": "day",
+    "cover_photo": "https://i.ibb.co/Y028BHP/mustangpreto.png"
+  },
+  {
+    "id": "16",
+    "model": "veyron spyder",
+    "brand": "Bugatti",
+    "price": "925",
+    "logo_brand": "https://i.ibb.co/CKR9HHW/logo.png",
+    "photos": [
+      { "photo": "https://i.ibb.co/mRNDYwf/gallardored.png", "color": "Red" },
+      {
+        "photo": "https://i.ibb.co/99J6QRM/gallardoyellowcerto.png",
+        "color": "yellow"
+      }
+    ],
+    "period": "day",
+    "cover_photo": "https://i.ibb.co/Qj49tJ8/BuggatiAzul.png"
   }
 ]

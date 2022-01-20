@@ -9,6 +9,12 @@ export const Container = styled.div`
   width: 100%;
   @media (max-width: 1000px) {
     margin-top: 20px;
+    width: 80%;
+    margin: 20px auto;
+  }
+  @media (max-width: 500px) {
+    margin-top: 20px;
+    margin: 20px auto;
   }
 `;
 
@@ -22,8 +28,11 @@ export const Image = styled.img`
 
 export const Slider = styled(Swiper)`
   height: 25rem;
+  width: 100%;
   margin-bottom: 2rem;
   .swiper-wrapper {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
   }
   @media (max-width: 300px) {
@@ -37,13 +46,9 @@ export const Slider = styled(Swiper)`
 `;
 
 export const Slide = styled.div`
-  width: 100%;
-  height: auto;
   display: flex;
-  align-items: center;
   justify-content: center;
-
-  
+  align-items: center;
 `;
 
 type Button = {
@@ -51,15 +56,12 @@ type Button = {
 };
 
 export const Item_Card = styled.div<image>`
-  width: ${({ isActive }) => (isActive ? "440px" : "15rem")};
+  width: ${({ isActive }) => (isActive ? "400px" : "15rem")};
   height: ${({ isActive }) => (isActive ? "240px" : "10rem")};
   margin-top: ${({ isActive }) => (isActive ? "-10%" : "0")};
-  padding: 3.8rem;
+  padding: 3rem;
   border-radius: 0.8rem;
   box-shadow: 0px 2px 30px #0000001a;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: relative;
   transition: all 1s ease;
   background: ${({ isActive }) =>
@@ -67,7 +69,7 @@ export const Item_Card = styled.div<image>`
       ? "linear-gradient(90deg, #b9baf1 0%, #e0d3ef 100%)"
       : ({ theme }) => theme.gray.grayLigth};
 
-  @media (max-width: 500px) {
+  @media (max-width: 600px) {
     width: 200px;
   }
 `;
@@ -82,7 +84,7 @@ export const ButtonsSlider = styled.button<Button>`
   border-radius: 50%;
   box-shadow: 0px 3px 6px #00000029;
   color: white;
-  top: 800px;
+  top: 900px;
   bottom: 0px;
   @media (max-width: 1000px) {
     top: 1100px;

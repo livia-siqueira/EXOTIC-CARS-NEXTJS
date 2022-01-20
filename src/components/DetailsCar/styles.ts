@@ -3,21 +3,18 @@ import Image from "next/image";
 
 export const Container = styled.div`
   width: 100%;
-  background: transparent
-    linear-gradient(
-      125deg,
-      #ffffff 0%,
-      ${({ theme }) => theme.gray.grayLigth_5} 100%
-    );
-    padding-top: 40px;
+  background: transparent linear-gradient(125deg, #ffffff 0%, #d8d7d7 100%) 0%
+    0% no-repeat padding-box;
+  padding-top: 40px;
+  opacity: 1;
 `;
 
 export const Title = styled.div`
-  width: 330px;
+  width: 350px;
   display: flex;
   justify-content: space-between;
 
-  @media(max-width: 450px){
+  @media (max-width: 1000px) {
     justify-content: center;
   }
 `;
@@ -47,8 +44,6 @@ export const ContainerButton = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-
-  
 `;
 
 export const ImageBig = styled(Image)``;
@@ -56,9 +51,9 @@ export const ImageBig = styled(Image)``;
 export const Name = styled.h2`
   font-size: 2rem;
 
-  @media (max-width: 450px) {
-   margin-left: 20px;
-   font-size: 1.4rem;
+  @media (max-width: 1000px) {
+    margin-left: 20px;
+    font-size: 1.4rem;
   }
 `;
 

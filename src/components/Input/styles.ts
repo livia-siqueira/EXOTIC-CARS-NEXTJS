@@ -9,10 +9,10 @@ export const Input = styled.input`
   padding-left: 1rem;
   border-radius: 12px;
   box-shadow: 1px 1px 4px gray;
-  padding-left: 1.5rem;
+  padding-left: 1rem;
   ::placeholder {
     font-style: italic;
-    padding-left: 1.5rem;
+    padding-left: 1rem;
     font-size: 0.8rem;
     color: ${({ theme }) => theme.gray.grayLigth_4};
   }
