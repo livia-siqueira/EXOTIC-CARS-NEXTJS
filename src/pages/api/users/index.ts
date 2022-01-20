@@ -32,7 +32,7 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
     } 
       data.push(newUser);
       fs.writeFileSync(pathFile, JSON.stringify(data));
-      return res.status(201).json({ message: "Success", user: newUser });
+      return res.status(200).json({ message: "Success", user: newUser });
   }
 }
 export default handler;

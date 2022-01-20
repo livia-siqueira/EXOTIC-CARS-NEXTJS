@@ -42,20 +42,11 @@ export const SliderCars: React.FC<{
             nextEl: btNext.current,
           }}
           breakpoints={{
-            1100: {
-              slidesPerView: images?.length,
-            },
             1000: {
               slidesPerView: 2,
             },
-            360: {
-              slidesPerView: 1,
-            },
             500: {
               slidesPerView: 1,
-            },
-            1340: {
-              slidesPerView: images?.length,
             },
           }}
         >

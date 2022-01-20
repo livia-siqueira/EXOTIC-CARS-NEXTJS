@@ -1,5 +1,6 @@
 import {Header} from "@components/index";
 import Head from "next/head";
+import * as styles from './styles'
 
 const Layout: React.FC = ({ children }: any) => {
   return (
@@ -8,7 +9,7 @@ const Layout: React.FC = ({ children }: any) => {
       <Head>
         <title>Exotic - Cars</title>
       </Head>
-      <main>{children}</main>
+      <styles.Main>{children}</styles.Main>
     </>
   );
 };

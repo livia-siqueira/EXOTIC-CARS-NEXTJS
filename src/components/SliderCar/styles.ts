@@ -7,11 +7,9 @@ interface image {
 
 export const Container = styled.div`
   width: 100%;
-
-  @media(max-width: 1000px){
-    margin-top: 200px;
+  @media (max-width: 1000px) {
+    margin-top: 20px;
   }
-
 `;
 
 export const Image = styled.img`
@@ -31,12 +29,10 @@ export const Slider = styled(Swiper)`
   @media (max-width: 300px) {
     width: 120px;
     height: auto;
-    margin: 0px auto;
   }
   @media (max-width: 600px) {
     width: 80%;
-    height: auto;
-    margin: 80px auto;
+    height: 280px;
   }
 `;
 
@@ -46,31 +42,8 @@ export const Slide = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  @media (max-width: 1345px) {
-    width: 200px;
-    height: auto;
-    margin: 0;
-  }
-  @media (max-width: 1080px) {
-    width: 300px;
-    height: auto;
-    margin: 0;
-  }
-  @media (max-width: 600px) {
-    width: 250px;
-    height: auto;
-    margin: 0;
-  }
-  @media (max-width: 450px) {
-    width: 150px;
-    height: auto;
-    margin-left: 30px;
-  }
-  @media (max-width: 360px) {
-    width: 150px;
-    height: auto;
-    margin-left: 30px;
-  }
+
+  
 `;
 
 type Button = {
@@ -93,6 +66,10 @@ export const Item_Card = styled.div<image>`
     isActive
       ? "linear-gradient(90deg, #b9baf1 0%, #e0d3ef 100%)"
       : ({ theme }) => theme.gray.grayLigth};
+
+  @media (max-width: 500px) {
+    width: 200px;
+  }
 `;
 
 export const ButtonsSlider = styled.button<Button>`
@@ -100,19 +77,25 @@ export const ButtonsSlider = styled.button<Button>`
   background: ${({ theme }) => theme.gray.grayDark};
   width: 2.7rem;
   height: 2.7rem;
-  ${({ direction }) => (direction === "left" ? "left: 90px" : "right: 90px")};
+  ${({ direction }) => (direction === "left" ? "left: 50px" : "right: 50px")};
   border: none;
   border-radius: 50%;
   box-shadow: 0px 3px 6px #00000029;
   color: white;
   top: 800px;
   bottom: 0px;
-  @media (max-width: 1335px) {
-    width: 2rem;
-    height: 2rem;
-    padding: 2px;
+  @media (max-width: 1000px) {
+    top: 1100px;
     margin-left: 0%;
     margin-right: 0%;
+  }
+  @media (max-width: 730px) {
+    top: 800px;
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+  @media (max-width: 500px) {
+    ${({ direction }) => (direction === "left" ? "left: 0px" : "right: 0px")};
   }
 `;
 

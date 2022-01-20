@@ -1,5 +1,5 @@
 import type { AppProps } from "next/app";
-import {Layout} from "@components/index";
+import {Header, Layout} from "@components/index";
 import { ThemeProvider } from "styled-components";
 import { Toaster } from "react-hot-toast";
 import {Global,theme} from "@shared/index";
@@ -10,10 +10,9 @@ function MyApp({ Component, pageProps }: AppProps) {
     <Provider session={pageProps.session}>
     <ThemeProvider theme={theme}>
       <Global/>
-      <Layout>
+      <Header/>
         <Component {...pageProps} />
         <Toaster position="top-center" toastOptions={{duration:3000}}/>
-      </Layout>
     </ThemeProvider>
     </Provider>
   );

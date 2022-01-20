@@ -2,23 +2,19 @@ import { createGlobalStyle } from "styled-components";
 
 const Global = createGlobalStyle`
 html,
-body,
-#__next {
+body {
   padding: 0;
   margin: 0;
   font-family:'Segoe UI', 'Helvetica', Geneva, Verdana, sans-serif;
   height: 100%;
-}
-html{
-        @media (max-width: 1080px){
+  @media (max-width: 1080px){
             font-size: 90%; //px fixa no valor
         }
 
         @media (max-width: 720px){
             font-size: 80.5%;
         }
-    }
-
+}
 button {
   cursor: pointer;
 }

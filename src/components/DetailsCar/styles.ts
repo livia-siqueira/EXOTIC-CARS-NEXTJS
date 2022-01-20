@@ -3,52 +3,63 @@ import Image from "next/image";
 
 export const Container = styled.div`
   width: 100%;
-  height: 100%;
   background: transparent
     linear-gradient(
       125deg,
       #ffffff 0%,
       ${({ theme }) => theme.gray.grayLigth_5} 100%
     );
-
-    @media(max-width: 1000px){
-      height: 100vh;
-      display: flex;
-      justify-content: center ;
-      padding-top: 90px;
-    }
-
-
+    padding-top: 40px;
 `;
 
 export const Title = styled.div`
   width: 330px;
   display: flex;
   justify-content: space-between;
+
+  @media(max-width: 450px){
+    justify-content: center;
+  }
 `;
 
 export const Content = styled.div`
   width: 80%;
   margin: 0px auto;
   padding-top: 20px;
+
+  @media (max-width: 1000px) {
+    width: 100%;
+  }
 `;
 
 export const ContainerItems = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media (max-width: 1000px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 export const ContainerButton = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  
 `;
 
 export const ImageBig = styled(Image)``;
 
 export const Name = styled.h2`
   font-size: 2rem;
+
+  @media (max-width: 450px) {
+   margin-left: 20px;
+   font-size: 1.4rem;
+  }
 `;
 
 export const Price = styled.p`

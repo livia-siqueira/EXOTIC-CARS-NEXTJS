@@ -40,12 +40,12 @@
     "model": "M1 Competition",
     "brand": "BMW",
     "price": "825",
-    "logo_brand": "https://i.ibb.co/2FLvM5s/BMWBranca.png",
+    "logo_brand": "https://i.ibb.co/yNXhcSx/logoFerrari.png",
     "photos": [
       { "photo": "https://i.ibb.co/FK9cnnF/bmwbranco.png", "color": "white" }
     ],
     "period": "Day",
-    "cover_photo": "https://i.ibb.co/yNXhcSx/logoFerrari.png"
+    "cover_photo": "https://i.ibb.co/2FLvM5s/BMWBranca.png"
   },
   {
     "id": "4",

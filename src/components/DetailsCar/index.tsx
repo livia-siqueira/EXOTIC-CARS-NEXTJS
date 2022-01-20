@@ -47,7 +47,7 @@ const DetailsCar: React.FC<Props> = ({ carSelected }) => {
           <styles.ImageBig
             src={photos[carActive].photo}
             width={783}
-            height={408}
+            height={400}
             layout="intrinsic"
             alt="Image in focus"
           />
@@ -62,7 +62,6 @@ const DetailsCar: React.FC<Props> = ({ carSelected }) => {
             <AiOutlineArrowRight size={25} style={{ marginLeft: "20px" }} />
           </Button>
         </styles.ContainerButton>
-
         <SliderCars
           ImagesCar={photos}
           indexActive={carActive}

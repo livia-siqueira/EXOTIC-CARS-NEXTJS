@@ -42,12 +42,6 @@ export const Button = styled.button<PropsButton>`
   }
   }
 
-  @media(max-width: 1000px){
-    max-width: 100px;
-    & + & {
-    margin: 0;
-  }
-  }
-
+ 
 
 `;
